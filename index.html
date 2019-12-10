@@ -109,75 +109,77 @@
 			</section>
 
 			<section>
-				<h3>Quantifiers</h3>
-				<table>
-					<thead>
+				<section>
+					<h3>Quantifiers</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Pattern</th>
+								<th>Matches</th>
+							</tr>
+						</thead>
 						<tr>
-							<th>Pattern</th>
-							<th>Matches</th>
+							<td>Ex*p</td>
+							<td>
+								<span><span class="regex--match">Ep</span>ression</span>
+								<span><span class="regex--match">Exp</span>ression</span>
+								<span><span class="regex--match">Exxxp</span>ression</span>
+							</td>
 						</tr>
-					</thead>
-					<tr>
-						<td>Ex*p</td>
-						<td>
-							<span><span class="regex--match">Ep</span>ression</span>
-							<span><span class="regex--match">Exp</span>ression</span>
-							<span><span class="regex--match">Exxxp</span>ression</span>
-						</td>
-					</tr>
-					<tr class="fragment">
-						<td>Ex+p</td>
-						<td>
-							<span>Epression</span>
-							<span><span class="regex--match">Exp</span>ression</span>
-							<span><span class="regex--match">Exxxp</span>ression</span>
-						</td>
-					</tr>
-					<tr class="fragment">
-						<td>Ex?p</td>
-						<td>
-							<span><span class="regex--match">Ep</span>ression</span>
-							<span><span class="regex--match">Exp</span>ression</span>
-							<span>Exxxpression</span>
-						</td>
-					</tr>
-				</table>
-			</section>
+						<tr class="fragment">
+							<td>Ex+p</td>
+							<td>
+								<span>Epression</span>
+								<span><span class="regex--match">Exp</span>ression</span>
+								<span><span class="regex--match">Exxxp</span>ression</span>
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>Ex?p</td>
+							<td>
+								<span><span class="regex--match">Ep</span>ression</span>
+								<span><span class="regex--match">Exp</span>ression</span>
+								<span>Exxxpression</span>
+							</td>
+						</tr>
+					</table>
+				</section>
 
-			<section>
-				<h3>Quantifiers</h3>
-				<table>
-					<thead>
+				<section>
+					<h3>Quantifiers</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>Pattern</th>
+								<th>Matches</th>
+							</tr>
+						</thead>
 						<tr>
-							<th>Pattern</th>
-							<th>Matches</th>
+							<td>Ex{3}p</td>
+							<td>
+								<span>Epression</span>
+								<span>Expression</span>
+								<span><span class="regex--match">Exxxp</span>ression</span>
+							</td>
 						</tr>
-					</thead>
-					<tr>
-						<td>Ex{3}p</td>
-						<td>
-							<span>Epression</span>
-							<span>Expression</span>
-							<span><span class="regex--match">Exxxp</span>ression</span>
-						</td>
-					</tr>
-					<tr class="fragment">
-						<td>Ex{1,}p</td>
-						<td>
-							<span>Epression</span>
-							<span><span class="regex--match">Exp</span>ression</span>
-							<span><span class="regex--match">Exxxp</span>ression</span>
-						</td>
-					</tr>
-					<tr class="fragment">
-						<td>Ex{1,2}p</td>
-						<td>
-							<span>Epression</span>
-							<span><span class="regex--match">Exp</span>ression</span>
-							<span>Exxxpression</span>
-						</td>
-					</tr>
-				</table>
+						<tr class="fragment">
+							<td>Ex{1,}p</td>
+							<td>
+								<span>Epression</span>
+								<span><span class="regex--match">Exp</span>ression</span>
+								<span><span class="regex--match">Exxxp</span>ression</span>
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>Ex{1,2}p</td>
+							<td>
+								<span>Epression</span>
+								<span><span class="regex--match">Exp</span>ression</span>
+								<span>Exxxpression</span>
+							</td>
+						</tr>
+					</table>
+				</section>
 			</section>
 
 			<section>
@@ -196,11 +198,11 @@
 						</td>
 					</tr>
 					<tr class="fragment">
-							<td>\d</td>
-							<td>
-								<span>Regex is power <span class="regex--match">9000</span>!</span>
-							</td>
-						</tr>
+						<td>\d</td>
+						<td>
+							<span>Regex is power <span class="regex--match">9000</span>!</span>
+						</td>
+					</tr>
 					<tr class="fragment">
 						<td>\D</td>
 						<td>
@@ -222,23 +224,137 @@
 						</td>
 					</tr>
 					<tr class="fragment">
-							<td>\s</td>
-							<td>
-									Regex<span class="regex--match"> </span>is<span class="regex--match"> </span>power<span
-									class="regex--match"> </span>9000!
-								
-							</td>
-						</tr>
-						<tr class="fragment">
-							<td>\S</td>
-							<td>
-									<span class="regex--match">Regex</span> <span class="regex--match">is</span> <span
-									class="regex--match">power</span> <span class="regex--match">9000!</span>
-							</td>
-						</tr>
+						<td>\s</td>
+						<td>
+							Regex<span class="regex--match"> </span>is<span class="regex--match"> </span>power<span
+								class="regex--match"> </span>9000!
+
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>\S</td>
+						<td>
+							<span class="regex--match">Regex</span> <span class="regex--match">is</span> <span
+								class="regex--match">power</span> <span class="regex--match">9000!</span>
+						</td>
+					</tr>
 				</table>
 			</section>
 
+			<section>
+				<h3>Escaping</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>a*b</td>
+						<td>a*<span class="regex--match">b</span></span></td>
+					</tr>
+					<tr class="fragment">
+						<td>a\*b</td>
+						<td><span class="regex--match">a*b</span></td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>End and begin of line</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Regex</td>
+						<td>
+							<span class="regex--match">Regex</span>,
+							<span class="regex--match">Regex</span> so regex
+						</td>
+					</tr>
+					<tr>
+						<td>^Regex&</td>
+						<td>
+							<span class="regex--match">Regex</span>,
+							Regex so regex
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Grouping</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>[abc]</td>
+						<td>
+							<span>C<span class="regex--match">a</span>t</span>,
+							<span>J<span class="regex--match">a</span>v<span class="regex--match">a</span>s<span
+									class="regex--match">c</span>ript<span class="regex--match"></span></span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>[^abc]</td>
+						<td>
+							<span><span class="regex--match">C</span>a<span class="regex--match">t</span></span>,
+							<span><span class="regex--match">J</span>a<span class="regex--match">v</span>a<span
+									class="regex--match">s</span>c<span class="regex--match">ript</span></span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>[a-z]</td>
+						<td>
+							<span>C<span class="regex--match">at</span></span>,
+							<span>J<span class="regex--match">avascript</span></span>
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Grouping</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+							<th>Remembered part</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Chapter (\d+)</td>
+						<td>
+							<span><span class="regex--match">Chapter 23</span></span>
+						</td>
+						<td>
+							23
+						</td>
+					</tr>
+
+				</table>
+			</section>
+
+			<section>
+				<h3>Regexes in Javascript</h3>
+				<pre><code class="hljs" data-trim>
+						const regex = '/ab+c/';
+					</code></pre>
+				<p>or,</p>
+				<pre><code class="hljs" data-trim>
+						const regex = new RegExp('/ab+c/');
+					</code></pre>
+			</section>
 		</div>
 
 	</div>
