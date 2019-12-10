@@ -25,6 +25,25 @@ body {
   color: #000; }
 
 /*********************************************
+ * Regex
+ *********************************************/
+
+ .regex {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.regex--pattern {
+  width: 200px;
+}
+
+.regex--match {
+  color: black;
+  background-color: yellow;
+}
+
+/*********************************************
  * VIEW FRAGMENTS
  *********************************************/
 .reveal .slides section .fragment {

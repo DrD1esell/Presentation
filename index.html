@@ -48,7 +48,6 @@
 
 			<section>
 				<section>
-					<!-- Sometimes we need to find some character combinations in text -->
 					<h2>Search problems</h2>
 					<p>
 						Is there a whale?
@@ -60,7 +59,6 @@
 				</section>
 
 				<section>
-					<!-- or check if some text fits to pattern. -->
 					<h2>Validation problems</h2>
 					<p>
 						What's wrong?
@@ -69,19 +67,16 @@
 				</section>
 
 				<section>
-					<!-- For example, our application admits user's phone number only in this format. How to check this? -->
 					<p>+375(29)222-22-22</p>
 				</section>
 
 				<section>
-					<!-- We can use next function. But this is a big unreadable piece of code. -->
 					<pre><code class="hljs" data-trim>
 						console.log('Some awesome function')
 					</code></pre>
 				</section>
 
 				<section>
-					<!-- Also we can use this short but weird function -->
 					<pre><code class="hljs" data-trim>
 							console.log('RegExp')
 						</code></pre>
@@ -89,10 +84,159 @@
 			</section>
 
 			<section>
-				<!-- Only if you don't know the regular expression technology. -->
-				<pre><code class="hljs" data-trim>
-							console.log('RegExp')
-				</code></pre>
+				<h3>Definition</h3>
+				<img src="./images/wiki.JPG" width="700">
+			</section>
+
+			<section>
+				<h3>Simple form</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>abc</td>
+						<td><span class="regex--match">abc</span>abcabc</td>
+					</tr>
+					<tr>
+						<td>23</td>
+						<td>1<span class="regex--match">23</span>4</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Quantifiers</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Ex*p</td>
+						<td>
+							<span><span class="regex--match">Ep</span>ression</span>
+							<span><span class="regex--match">Exp</span>ression</span>
+							<span><span class="regex--match">Exxxp</span>ression</span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>Ex+p</td>
+						<td>
+							<span>Epression</span>
+							<span><span class="regex--match">Exp</span>ression</span>
+							<span><span class="regex--match">Exxxp</span>ression</span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>Ex?p</td>
+						<td>
+							<span><span class="regex--match">Ep</span>ression</span>
+							<span><span class="regex--match">Exp</span>ression</span>
+							<span>Exxxpression</span>
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Quantifiers</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>Ex{3}p</td>
+						<td>
+							<span>Epression</span>
+							<span>Expression</span>
+							<span><span class="regex--match">Exxxp</span>ression</span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>Ex{1,}p</td>
+						<td>
+							<span>Epression</span>
+							<span><span class="regex--match">Exp</span>ression</span>
+							<span><span class="regex--match">Exxxp</span>ression</span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>Ex{1,2}p</td>
+						<td>
+							<span>Epression</span>
+							<span><span class="regex--match">Exp</span>ression</span>
+							<span>Exxxpression</span>
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h3>Special characters</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Pattern</th>
+							<th>Matches</th>
+						</tr>
+					</thead>
+					<tr>
+						<td>.</td>
+						<td>
+							<span class="regex--match">Regex is power 9000!</<span>
+						</td>
+					</tr>
+					<tr class="fragment">
+							<td>\d</td>
+							<td>
+								<span>Regex is power <span class="regex--match">9000</span>!</span>
+							</td>
+						</tr>
+					<tr class="fragment">
+						<td>\D</td>
+						<td>
+							<span><span class="regex--match">Regex is power </span>9000<span class="regex--match">!</span></span>
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>\w</td>
+						<td>
+							<span class="regex--match">Regex</span> <span class="regex--match">is</span> <span
+								class="regex--match">power</span> <span class="regex--match">9000</span>!
+						</td>
+					</tr>
+					<tr class="fragment">
+						<td>\W</td>
+						<td>
+							Regex<span class="regex--match"> </span>is<span class="regex--match"> </span>power<span
+								class="regex--match"> </span>9000<span class="regex--match">!</span>
+						</td>
+					</tr>
+					<tr class="fragment">
+							<td>\s</td>
+							<td>
+									Regex<span class="regex--match"> </span>is<span class="regex--match"> </span>power<span
+									class="regex--match"> </span>9000!
+								
+							</td>
+						</tr>
+						<tr class="fragment">
+							<td>\S</td>
+							<td>
+									<span class="regex--match">Regex</span> <span class="regex--match">is</span> <span
+									class="regex--match">power</span> <span class="regex--match">9000!</span>
+							</td>
+						</tr>
+				</table>
 			</section>
 
 		</div>
